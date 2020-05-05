@@ -1,4 +1,4 @@
-framework module Pods_EGOCircleMenu_Example {
+module Pods_EGOCircleMenu_Example {
   umbrella header "Pods-EGOCircleMenu_Example-umbrella.h"
 
   export *

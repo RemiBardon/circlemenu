@@ -1,11 +1,20 @@
-use_frameworks!
+platform :ios, '11.0'
 
 target 'EGOCircleMenu_Example' do
+  
+  # Comment the next line if you don't want to use dynamic frameworks
+  #use_frameworks!
+  
+  # Apple blocked utilizing external frameworks on free accounts with 13.3.1 upgrade
+  # Use static libraries instead if you're on a free account
+  # https://stackoverflow.com/a/60211703/10967642
+  use_modular_headers!
+  
   pod 'EGOCircleMenu', :path => '../'
-
-  target 'EGOCircleMenu_Tests' do
-    inherit! :search_paths
-
-    
-  end
+  #pod 'EGOCircleMenu', :git => 'https://github.com/RemiBardon/circlemenu.git'
+  
+#  target 'EGOCircleMenu_Tests' do
+#    inherit! :search_paths
+#  end
+  
 end

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'EGOCircleMenu'
-    s.version          = '1.0.1'
+    s.version          = '1.1.0'
     s.summary          = 'Simple circle menu for iOS developers'
     
     s.description      = <<-DESC
@@ -15,14 +15,19 @@ Pod::Spec.new do |s|
     
     s.ios.deployment_target = '11.0'
     
-    s.source_files = 'EGOCircleMenu/Classes/*.swift'
+    s.source_files = 'Sources/**/*.swift'
     s.ios.deployment_target = '11.0'
     s.swift_version = '4.2'
     
     s.resource_bundles = {
-        'EGOCircleMenu' => ['EGOCircleMenu/Assets/*.json']
+        'EGOCircleMenu' => ['Assets/*.json']
     }
     
-    s.dependency 'lottie-ios'
+    s.dependency 'lottie-ios', '~> 3.0'
     s.dependency 'PromiseKit', '~> 6.0'
+
+    s.test_spec 'Tests' do |test_spec|
+        test_spec.source_files = 'Tests/**/*.{h,m}'
+        #test_spec.dependency 'OCMock' # This dependency will only be linked with your tests.
+    end
 end
